@@ -4,7 +4,7 @@ const Nosotros = () => {
   return (
     <div>
       <Layout pagina='nosotros'>
-        <h1 className="heading">Desde Inicio</h1>
+        <h1 className="heading">Desde nosotros</h1>
       </Layout>
     </div>
   );
