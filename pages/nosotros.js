@@ -1,12 +1,13 @@
-import Image from "next/image";
 import Layout from "../components/Layout";
 
-export default function Home() {
+const Nosotros = () => {
   return (
     <div>
-      <Layout pagina='inicio'>
+      <Layout pagina='nosotros'>
         <h1 className="heading">Desde Inicio</h1>
       </Layout>
     </div>
   );
-}
+};
+
+export default Nosotros;
