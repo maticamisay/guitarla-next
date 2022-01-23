@@ -4,7 +4,7 @@ import styles from '../styles/Blog.module.css'
 
 
 const Blog = ({ entradas }) => {
-
+  
   return (
     <Layout pagina="Blog">
       <main className="contenedor">
@@ -23,7 +23,7 @@ const Blog = ({ entradas }) => {
 };
 
 export async function getServerSideProps() {
-  const url = "http://localhost:1337/blogs";
+  const url = `${process.env.API_URL}/blogs`;
   const respuesta = await fetch(url);
   const entradas = await respuesta.json();
 
