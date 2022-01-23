@@ -6,7 +6,9 @@ import styles from "../../styles/Entrada.module.css";
 const EntradaBlog = ({ entrada }) => {
   const { contenido, imagen, published_at, titulo } = entrada;
   return (
-    <Layout>
+    <Layout
+      pagina={titulo}
+    >
       <main className="contenedor">
         <h1 className="heading">Desde EntradaBlog</h1>
         <article className={styles.entrada}>
@@ -18,6 +20,7 @@ const EntradaBlog = ({ entrada }) => {
             alt={`Imagen entrada ${titulo}`}
           />
           <div className={styles.contenido}>
+            <h3>{titulo}</h3>
             <p className={styles.fecha}>{formatearFecha(published_at)}</p>
             <p className={styles.texto}>{contenido}</p>
           </div>
@@ -32,7 +35,7 @@ export async function getStaticPaths() {
   const respuesta = await fetch(url);
   const entradas = await respuesta.json();
   const paths = entradas.map((entrada) => ({
-    params: { id: entrada.id.toString() },
+    params: { url: entrada.url },
   }));
   return {
     paths,
@@ -40,13 +43,13 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params: { id } }) {
-  const url = `${process.env.API_URL}/blogs/${id}`;
-  const respuesta = await fetch(url);
+export async function getStaticProps({ params: { url } }) {
+  const urlBlog = `${process.env.API_URL}/blogs?url=${url}`;
+  const respuesta = await fetch(urlBlog);
   const entrada = await respuesta.json();
   return {
     props: {
-      entrada,
+      entrada: entrada[0],
     },
   };
 }
