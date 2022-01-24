@@ -1,3 +1,4 @@
+import Curso from "../components/Curso";
 import Layout from "../components/Layout";
 import ListadoInicio from "../components/ListadoInicio";
 
@@ -9,6 +10,9 @@ export default function Home({ guitarras, curso }) {
           <h1 className="heading">Un poco de nuestra coleccion</h1>
           <ListadoInicio guitarras={guitarras} />
         </main>
+        <Curso 
+          curso={curso}
+        />
       </Layout>
     </div>
   );
