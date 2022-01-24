@@ -11,7 +11,12 @@ const Header = ({ guitarra }) => {
         <div className={styles.barra}>
           <Link href="/">
             <a>
-              <Image width={400} height={100} src="/img/logo.svg" />
+              <Image
+                width={400}
+                height={100}
+                src="/img/logo.svg"
+                alt={`guitarra header`}
+              />
             </a>
           </Link>
 
