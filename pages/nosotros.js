@@ -8,8 +8,14 @@ const Nosotros = () => {
       <main className="contenedor">
         <h2 className="heading">Nosotros</h2>
         <div className={styles.contenido}>
-          <Image layout="responsive" width={600} height={450} src="/img/nosotros.jpg" alt='guitarra nosotros' />
-          <div >
+          <Image
+            layout="responsive"
+            width={600}
+            height={450}
+            src="/img/nosotros.jpg"
+            alt="Guitarra GuitarLA"
+          />
+          <div>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
               laoreet imperdiet sollicitudin. Nulla nec tortor leo. Donec
@@ -17,8 +23,8 @@ const Nosotros = () => {
               eleifend id convallis in, hendrerit sed metus. Donec dolor magna,
               fringilla sit amet accumsan at, fringilla vitae neque. Vestibulum
               tristique dui eleifend mauris laoreet, sed ultrices libero
-              </p>
-              <p>
+            </p>
+            <p>
               commodo. In hac habitasse platea dictumst. Vestibulum pellentesque
               risus ex, vitae sagittis nisi volutpat eu. Aenean ornare elit eget
               mauris auctor, vel dignissim massa facilisis. Aenean aliquet nibh

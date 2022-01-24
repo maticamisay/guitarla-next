@@ -1,6 +1,6 @@
 {
   "name": "guitarla-next",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
