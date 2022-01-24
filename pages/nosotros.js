@@ -8,7 +8,7 @@ const Nosotros = () => {
       <main className="contenedor">
         <h2 className="heading">Nosotros</h2>
         <div className={styles.contenido}>
-          <Image layout="responsive" width={600} height={450} src="/img/nosotros.jpg" />
+          <Image layout="responsive" width={600} height={450} src="/img/nosotros.jpg" alt='guitarra nosotros' />
           <div >
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
