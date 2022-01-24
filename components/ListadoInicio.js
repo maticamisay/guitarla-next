@@ -37,17 +37,13 @@ const Listado = ({ guitarras }) => {
     return windowSize;
   }
   const size = useWindowSize();
-  console.log(size.width);
   const guitarrasInicio = [];
   const cantidadMostrar = 3;
   if (size.width > 992) {
-    console.log("992");
     cantidadMostrar = 6;
   } else if (size.width > 768) {
-    console.log("768");
     cantidadMostrar = 4;
   } else if (size.width <= 768) {
-    console.log("768");
     cantidadMostrar = 3;
   }
 
