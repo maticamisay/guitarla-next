@@ -1,14 +1,36 @@
-.listado{
-    display: grid;
-    gap: 4rem;
+.listado {
+  display: grid;
+  gap: 4rem;
 }
-@media (min-width:768px){
-    .listado {
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (min-width: 768px) {
+  .listado {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-@media (min-width:992px){
-    .listado {
-        grid-template-columns: repeat(3, 1fr);
-    }
+@media (min-width: 992px) {
+  .listado {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
+.verMas {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2rem;
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--negro);
+  border: 2px solid var(--primary);
+  padding: 1rem 5rem;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+}
+
+.verMas:hover {
+    background-color: var(--primary);
+    color: var(--blanco);
+  }
