@@ -10,7 +10,6 @@ const EntradaBlog = ({ entrada }) => {
       pagina={titulo}
     >
       <main className="contenedor">
-        <h1 className="heading">Desde EntradaBlog</h1>
         <article className={styles.entrada}>
           <Image
             layout="responsive"
