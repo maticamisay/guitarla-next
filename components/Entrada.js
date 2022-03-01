@@ -4,8 +4,7 @@ import { formatearFecha } from "../helpers";
 import styles from "../styles/Entrada.module.css";
 
 function Entrada({ entrada }) {
-  const { titulo, resumen, imagen, published_at, url } = entrada;
-  return (
+  const { titulo, resumen, imagen, published_at, url } = entrada;  return (
     <article>
       <Image
         priority="true"

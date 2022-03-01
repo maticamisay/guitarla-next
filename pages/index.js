@@ -11,7 +11,7 @@ export default function Home({ guitarras, curso, entradas }) {
           <h1 className="heading">Un poco de nuestra coleccion</h1>
           <ListadoInicio guitarras={guitarras} />
         </main>
-        <Curso curso={curso} />
+        <Curso curso={curso[0]} />
         <section className="contenedor">
           <ListadoBlog entradas={entradas} />
         </section>

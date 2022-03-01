@@ -33,7 +33,7 @@ export async function getStaticPaths() {
   const url = `${process.env.API_URL}/blogs`;
   const respuesta = await fetch(url);
   const entradas = await respuesta.json();
-  const paths = entradas.map((entrada) => ({
+  const paths = entradas.map(entrada => ({
     params: { url: entrada.url },
   }));
   return {

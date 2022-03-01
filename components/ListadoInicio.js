@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const Listado = ({ guitarras }) => {
+  let guitarrasArr = Array.from(guitarras);
+
   function useWindowSize() {
     // Initialize state with undefined width/height so server and client renders match
     // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
@@ -54,7 +56,7 @@ const Listado = ({ guitarras }) => {
   return (
     <>
       <div className={styles.listado}>
-        {guitarrasInicio.map((guitarra) => (
+        {guitarrasArr.map((guitarra) => (
           <Guitarra key={guitarra.url} guitarra={guitarra} />
         ))}
       </div>
