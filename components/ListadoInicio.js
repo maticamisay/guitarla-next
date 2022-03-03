@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 
 const Listado = ({ guitarras }) => {
-  let guitarrasArr = Array.from(guitarras);
 
   function useWindowSize() {
     // Initialize state with undefined width/height so server and client renders match
@@ -53,6 +52,8 @@ const Listado = ({ guitarras }) => {
   for (let i = 0; cant < cantidadMostrar; cant++) {
     guitarrasInicio.push(guitarras[cant]);
   }
+  let guitarrasArr = Array.from(guitarrasInicio);
+
   return (
     <>
       <div className={styles.listado}>

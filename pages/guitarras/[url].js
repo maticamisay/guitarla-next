@@ -3,6 +3,7 @@ import Layout from "../../components/Layout";
 import styles from "../../styles/Guitarra.module.css";
 
 const Producto = ({ guitarra }) => {
+
   const { descripcion, imagen, nombre, precio } = guitarra[0];
   return (
     <Layout pagina={`Guitarra ${nombre}`}>

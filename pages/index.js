@@ -11,7 +11,7 @@ export default function Home({ guitarras, curso, entradas }) {
           <h1 className="heading">Un poco de nuestra coleccion</h1>
           <ListadoInicio guitarras={guitarras} />
         </main>
-        <Curso curso={curso[0]} />
+        <Curso curso={curso} />
         <section className="contenedor">
           <ListadoBlog entradas={entradas} />
         </section>
@@ -30,7 +30,6 @@ export async function getServerSideProps() {
     fetch(urlCursos),
     fetch(urlBlog),
   ]);
-
   const [guitarras, curso, entradas] = await Promise.all([
     resGuitarras.json(),
     resCursos.json(),
