@@ -28,11 +28,22 @@ function MyApp({ Component, pageProps }) {
     }
   };
 
+  const actualizarCantidad = (producto) => {
+    const carritoActualizado = carrito.map((articulo) => {
+      if (articulo.id === producto.id) {
+        articulo.cantidad = producto.cantidad;
+      }
+      return articulo;
+    });
+    setCarrito(carritoActualizado)
+  }
+
   return (
     <Component
       {...pageProps}
       carrito={carrito}
       agregarCarrito={agregarCarrito}
+      actualizarCantidad={actualizarCantidad}
     />
   );
 }
