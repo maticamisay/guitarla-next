@@ -5,6 +5,7 @@
 @media (min-width: 768px) {
   .contenido {
     grid-template-columns: 3fr 2fr;
+    align-items: flex-start;
   }
 }
 .carrito {
@@ -17,6 +18,7 @@
   align-items: center;
   border-bottom: 1px solid #cfcfcf;
   padding: 3rem 0;
+  position: relative;
 }
 
 .producto:last-of-type {
@@ -31,33 +33,49 @@
   font-weight: 700;
   font-size: 2.2rem;
 }
-.cantidad{
+.cantidad {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
 }
-.cantidad p{
+.cantidad p {
   margin: 0;
 }
-.select{
-all:unset;
-padding: 1rem;
-border: 1px solid #cfcfcf;
-flex:1;
-text-align: center;
-border-radius: 1rem;
+.select {
+  all: unset;
+  padding: 1rem;
+  border: 1px solid #cfcfcf;
+  flex: 1;
+  text-align: center;
+  border-radius: 1rem;
 }
 .precio {
-    font-weight: 700;
-    color: var(--primary);
+  font-weight: 700;
+  color: var(--primary);
 }
-.precio span{
-    font-size: 2.4rem;
+.precio span {
+  font-size: 2.4rem;
 }
 .subtotal {
-    font-weight: 700;
+  font-weight: 700;
 }
 .subtotal span {
-    font-size: 2.4rem;
+  font-size: 2.4rem;
+}
+.eliminar {
+  all: unset;
+  position: absolute;
+  top: 3rem;
+  right: 1rem;
+  font-weight: bold;
+  color: red;
+}
+.eliminar:hover {
+  cursor: pointer;
+}
+.resumen {
+  background-color: #e7eaec;
+  padding: 3rem;
+  border-radius: 1rem;
 }
